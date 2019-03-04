@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - 8080:8080
+    command: bash -c "npm install && quasar dev"
+    working_dir: /app
+    volumes:
+      - ".:/app"
+
